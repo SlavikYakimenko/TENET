@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>TENET</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+<header>
+    <a href="#" class="logo"><img src="img/logo.png" alt="logo"></a>
+    <div class="toggle"><img src="img/toggle.png"></div>
+</header>
+<div class="banner">
+    <div class="content">
+        <h2>Time <span>Runs Out</span></h2>
+        <p>Armed with only one word, Tenet, and fighting for the survival of the entire world, a Protagonist journeys
+            through a twilight world of international espionage on a mission that will unfold in something beyond real
+            time.</p>
+        <a href="#" class="play" onclick="toggle()"><img src="img/play.png" alt="">Watch Trailer</a>
+        <div class="slide"></div>
+        <ul class="sci">
+            <li><a href="https://www.facebook.com/tenetfilm/"><img src="img/facebook.png"></a></li>
+            <li><a href="https://twitter.com/tenetfilm"><img src="img/twitter.png"></a></li>
+            <li><a href="https://www.instagram.com/tenetfilm/"><img src="img/instagram.png"></a></li>
+        </ul>
+    </div>
+</div>
+<div class="trailer">
+    <video src="img/tenet-trailer-1_h720p.mov" controls="true"></video>
+    <img src="img/close.png" class="close" onclick="toggle()">
+</div>
+<script type="text/javascript">
+    function toggle() {
+        var trailer = document.querySelector('.trailer');
+        var video = document.querySelector('video');
+        trailer.classList.toggle('active')
+        video.currentTime = 0;
+        video.pause();
+    }
+</script>
+</body>
+</html>
